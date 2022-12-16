@@ -5,12 +5,7 @@ def reverse(sequence):
         print("U inputed a RNA")
     else:
         sequence=sequence[::-1]
-        sequence=sequence.replace("A","t")
-        sequence=sequence.replace("T","a")
-        sequence=sequence.replace("C","g")
-        sequence=sequence.replace("G","c")
-        #sequence=sequence.replace("A","t").replace("T","a").replace("C","g").replace("G","c")
-        # should i use the line above or the other 4?
+        sequence=sequence.replace("A","t").replace("T","a").replace("C","g").replace("G","c")
         print(sequence.upper())
 def codon(sequence_codon):
     new=""
@@ -22,7 +17,7 @@ def codon(sequence_codon):
                 print("SIM")
 reverse(sequence=input("Which sequence do you want to analyze:\n>>"))
 codon(sequence_codon=input("Which sequence do you want to analyze:\n>>"))
-with open("/home/guimbreon/Desktop/Programação/Assignment/sequence_ena.fasta", "r") as gff:
+with open(input("Which file do you want to analyze:\n>>")), "r") as gff:
     def fasta(gff):
         keys,values=[],[]
         for lines in gff:
@@ -30,4 +25,4 @@ with open("/home/guimbreon/Desktop/Programação/Assignment/sequence_ena.fasta",
                 lines=lines.replace(">","")
                 key=lines
         print(*keys) 
-#fasta(gff)
+fasta(gff)
