@@ -1,6 +1,10 @@
+#!/usr/bin/python
+import sys
 bases,total,all,names,count=["A","T","G","C"],"",[],[],0
+print("This is the name of the program:", sys.argv[1])
+print("Argument List:", str(sys.argv))
 with open((input("Which file are you going to analyze?/n>>")).replace("'",""), "r") as gff: #with the replace method it can now read any file u drag to the terminal
-    search=input("Which sequence do u want to search for?/n>>").upper()
+    search=sys.argv[1].replace("'","").upper()
     if set(search).difference(bases) == set() and len(search)>=5: #Store the names and all the sequences
         for lines in gff:
             if lines.startswith(">"):
@@ -11,6 +15,7 @@ with open((input("Which file are you going to analyze?/n>>")).replace("'",""), "
                 total+=lines
     else:
         print("\n\nDon't forget:\n-The motif you want to search for has to be DNA {A,T,G,C}\n-Have atleast 5bp")
+        print(sys.argv[1])
     for seq2 in all: #Analizes the reverse-complement
         seq2=(seq2[::-1].replace("A","t").replace("T","a").replace("C","g").replace("G","c")).upper() #Transforms it into a reverse complement
         for i, _ in enumerate(seq2):
