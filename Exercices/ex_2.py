@@ -1,3 +1,5 @@
+# Exercises 02
+# Variables and type casting
 # 1-My first strings
 plant_species=["Pteridophytes", "Bryophytes", "Angiosperms"]
 animal_species=["Amorphea", "Obazoa", "Filozoa"]
@@ -50,6 +52,7 @@ print(teste)
 
 
 # 4-Dictionaries
+
 print("\n\n")
 animals = {
     "Animalia":["Treponema_pallidum", "Raphus_cucullatus", "Gallinula_aleata"],
@@ -62,6 +65,7 @@ print(animals["Fungi"])
 print(animals["Protista"])
 
 # 5-Sets
+
 print("\n\n")
 list=[13,13,420,13,13]
 print(list)
