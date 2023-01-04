@@ -17,7 +17,7 @@ def codon(sequence_codon):
                 print("SIM")
 reverse(sequence=input("Which sequence do you want to analyze:\n>>"))
 codon(sequence_codon=input("Which sequence do you want to analyze:\n>>"))
-with open(input("Which file do you want to analyze:\n>>")), "r") as gff:
+with open(input("Which file do you want to analyze:\n>>"), "r") as gff:
     def fasta(gff):
         keys,values=[],[]
         for lines in gff:
