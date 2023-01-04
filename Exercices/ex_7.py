@@ -1,5 +1,5 @@
 #File I/O
-#1
+#01 - Samples and coordinates
 print("PART 01- Samples and coordinates")
 file1=[]
 filedic={}
