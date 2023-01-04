@@ -1,4 +1,6 @@
 import sys
+# Exercises 06
+# Cycles
 #01- Species names again
 sp_list01 = ["Antaresia childreni", "Antaresia maculosa", "Antaresia perthensis", "Antaresia stimsoni", "Apodora papuana", "Aspidites melanocephalus", "Aspidites ramsayi", "Bothrochilus boa", "Leiopython albertisii", "Morelia viridis", "Morelia imbricata", "Python brongersmai"]
 sp_list02 = ["Liasis fuscus", "Liasis mackloti", "Liasis olivaceus", "Malayopython reticulatus", "Malayopython timoriensis", "Morelia azurea", "Morelia bredli", "Morelia carinata", "Morelia spilota", "Morelia viridis", "Python anchietae", "Python bivittatus", "Python curtus"]

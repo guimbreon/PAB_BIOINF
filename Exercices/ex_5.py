@@ -1,3 +1,5 @@
+# Exercises 05
+# Conditionals
 #01- Species names
 
 sp_list01 = ["Antaresia childreni", "Antaresia maculosa", "Antaresia perthensis", "Antaresia stimsoni", "Apodora papuana", "Aspidites melanocephalus", "Aspidites ramsayi", "Bothrochilus boa", "Leiopython albertisii", "Morelia viridis", "Morelia imbricata", "Python brongersmai"]
