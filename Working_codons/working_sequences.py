@@ -1,5 +1,7 @@
+import sys
 file1,names,i,bases=[],[],0,["A","T","G","C"]
-with open(input("Which file are you going to analyze?/n>>"), "r") as gff:
+with open(sys.argv[1].replace("'",""), "r") as gff:
+    
     for lines in gff:
         if set(lines).difference(bases) == set():#Store the names and all the sequences
             continue
