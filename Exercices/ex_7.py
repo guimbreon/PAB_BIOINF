@@ -4,7 +4,7 @@
 print("PART 01- Samples and coordinates")
 file1=[]
 filedic={}
-with open("/to_use_01.txt", "r") as gff: #analyze the file to_use_01.txt
+with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use", "r") as gff: #analyze the file to_use_01.txt
     for lines in gff:
         if lines.startswith("Sample"):
             continue  
@@ -15,13 +15,14 @@ with open("/to_use_01.txt", "r") as gff: #analyze the file to_use_01.txt
     filedic["Var"]="43.13 6.25"
     filedic["Tun"]="36.95 8.85"
     print(filedic)
-with open("/to_use_01_new.txt", "w") as gff: #analyze the file to_use_01.txt
+with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use", "w") as gff: #analyze the file to_use_01.txt
     for key in filedic: 
         gff.write("\n")  
         gff.write(key)
         gff.write("\n") 
         gff.write(filedic[key])
 #02- Basic daata filtering
+"""
 print("02 - Basic data filtering")
 filedic2={}
 with open("/to_use_02.txt", "r") as gff:#analyze the file to_use_02.txt
@@ -41,3 +42,4 @@ with open("/to_use_02_new.txt", "w") as gff:#analyze the file to_use_02.txt
         if key=="Bio3":
             print(key)
         gff.write("\n") 
+"""
