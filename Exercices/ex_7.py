@@ -19,7 +19,6 @@ filedic["Var"]="43.13 6.25"
 filedic["Tun"]="36.95 8.85"
 for key in filedic:
     filedic[key]=str(filedic[key]).replace(" ","\t")
-print(filedic)
 filedic=sorted(filedic.items(), key=lambda x:x[0])
 filedic=dict(filedic)
 #with open(input("Which file do you want to save the program?/nCan't use the same file has the last used!/n>>"), "r") as gff:
@@ -27,7 +26,6 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_01_
     gff.write(f"{first1}\n")
     for key in filedic:
         gff.write(f"{key}\t{filedic[key]}\n")
-
 #02- Basic daata filtering
 print("#02- Basic daata filtering")
 filedic2,filedic2_new={},[]
@@ -60,6 +58,7 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02_
             gff.write(f"\t{item}")
         gff.write("\n")
 #EDIT THINGS HERE!
+
 cords=[]
 print("\n\n\n\n\n")
 print(filedic["Tun"])
