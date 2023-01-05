@@ -17,6 +17,8 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_01.
         filedic[key]=value
 filedic["Var"]="43.13 6.25"
 filedic["Tun"]="36.95 8.85"
+for key in filedic:
+    filedic[key]=str(filedic[key]).replace(" ","\t")
 print(filedic)
 filedic=sorted(filedic.items(), key=lambda x:x[0])
 filedic=dict(filedic)
@@ -29,6 +31,7 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_01_
 #02- Basic daata filtering
 print("#02- Basic daata filtering")
 filedic2,filedic2_new={},[]
+#with open(input("Which file do you want to analize?/n>>"), "r") as gff:
 with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02.txt", "r") as gff:#analyze the file to_use_02.txt
     for lines in gff:
         value=[]
@@ -47,6 +50,8 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02.
         filedic2[key]=value
 filedic2=sorted(filedic2.items(), key=lambda x:x[0])
 filedic2=dict(filedic2)
+
+#with open(input("Which file do you want to save the program?/nCan't use the same file has the last used!/n>>"), "r") as gff:
 with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02_new.txt", "w") as gff:#analyze the file to_use_02.txt
     gff.write(f"{first2}\n")
     for key in filedic2:
@@ -54,16 +59,15 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02_
         for item in filedic2[key]:
             gff.write(f"\t{item}")
         gff.write("\n")
-"""
 #EDIT THINGS HERE!
+cords=[]
+print("\n\n\n\n\n")
+print(filedic["Tun"])
 with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02_new2.txt", "w") as gff:#analyze the file to_use_02.txt
     gff.write(f"{first2}\tLat\tLong".replace("\n",""))
-
     for key in filedic2:
         gff.write(f"\n{key}")
-
-        for item1 in filedic[key]:
-            print(item1)
-            for item2 in filedic2[key]:
-                gff.write(f"\t{item1}\t1\t1")
-"""
+        for item in filedic2[key]:
+            gff.write(f"\t{item}")
+        gff.write(f"\t{filedic[key]}")
+        print(filedic[key])
