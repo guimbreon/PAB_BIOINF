@@ -57,10 +57,6 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02_
         for item in filedic2[key]:
             gff.write(f"\t{item}")
         gff.write("\n")
-#EDIT THINGS HERE!
-
-cords=[]
-print("\n\n\n\n\n")
 print(filedic["Tun"])
 with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02_new2.txt", "w") as gff:#analyze the file to_use_02.txt
     gff.write(f"{first2}\tLat\tLong".replace("\n",""))
@@ -70,3 +66,19 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/to_use_02_
             gff.write(f"\t{item}")
         gff.write(f"\t{filedic[key]}")
         print(filedic[key])
+
+#03 - VCF parsing
+missing,total=0,0
+with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex07_genotypes.vcf", "r") as gff:
+    for lines in gff:
+        if lines.startswith("locus"):
+            missing=lines.count(".")
+            total=len(lines)
+            lines=lines.split()
+            
+            if missing!=0:
+                perc=(missing/total)*100
+                print(f"{lines[0]}\t{round(perc,2)}")     
+            else:
+                print(f"{lines[0]}\t0")
+            
