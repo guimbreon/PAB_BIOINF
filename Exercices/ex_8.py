@@ -5,7 +5,7 @@ def reverse(sequence):
         print("U inputed a RNA")
     else:
         sequence=sequence[::-1]
-        sequence=sequence.replace("A","t").replace("T","a").replace("C","g").replace("G","c")
+        sequence=sequence.replace("A","t").replace("T","a").replace("C","g").replace("G","c").upper()
         print(sequence.upper())
 def codon(sequence_codon):
     new=""
