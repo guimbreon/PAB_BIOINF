@@ -80,3 +80,20 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/ex07
                 print(f"{lines[0]}\t{round(perc,2)}")     
             else:
                 print(f"{lines[0]}\t0")
+
+seperate=["teste"]
+i=0
+print("\n\n\n\n\n")
+with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/ex07_genotypes.vcf", "r") as gff:
+    for lines in gff:
+        i=0
+        if lines.startswith("#CHROM"):
+            size=len(lines.split())
+        if lines.startswith("locus"):
+            lines=lines.split()
+            if seperate[0]=="teste":
+                seperate=[0,]*(len(lines)-10)
+            for thing in lines[9:size-1]:
+                seperate[i]=seperate[i]+thing.count(".")
+                i+=1    
+print(seperate)
