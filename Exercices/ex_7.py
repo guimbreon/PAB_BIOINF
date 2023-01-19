@@ -6,7 +6,7 @@ print("PART 01- Samples and coordinates")
 file1=[]
 filedic={}
 #with open(input("Which file do you want to analize?/n>>"), "r") as gff:
-with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_use_01.txt", "r") as gff:
+with open("~/to_use_01.txt", "r") as gff:
     for lines in gff:
         if lines.startswith("Sample"):
             first1=lines
@@ -22,7 +22,7 @@ for key in filedic:
 filedic=sorted(filedic.items(), key=lambda x:x[0])
 filedic=dict(filedic)
 #with open(input("Which file do you want to save the program?/nCan't use the same file has the last used!/n>>"), "r") as gff:
-with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_use_01_new.txt", "w") as gff:
+with open("~/to_use_01_new.txt", "w") as gff:
     gff.write(f"{first1}\n")
     for key in filedic:
         gff.write(f"{key}\t{filedic[key]}\n")
@@ -30,7 +30,7 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_u
 print("#02- Basic daata filtering")
 filedic2,filedic2_new={},[]
 #with open(input("Which file do you want to analize?/n>>"), "r") as gff:
-with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_use_02.txt", "r") as gff:#analyze the file to_use_02.txt
+with open("~/to_use_02.txt", "r") as gff:#analyze the file to_use_02.txt
     for lines in gff:
         value=[]
         if lines.startswith("Sample"):
@@ -50,7 +50,7 @@ filedic2=sorted(filedic2.items(), key=lambda x:x[0])
 filedic2=dict(filedic2)
 
 #with open(input("Which file do you want to save the program?/nCan't use the same file has the last used!/n>>"), "r") as gff:
-with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_use_02_new.txt", "w") as gff:#analyze the file to_use_02.txt
+with open("~/to_use_02_new.txt", "w") as gff:#analyze the file to_use_02.txt
     gff.write(f"{first2}\n")
     for key in filedic2:
         gff.write(f"{key}")
@@ -58,7 +58,7 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_u
             gff.write(f"\t{item}")
         gff.write("\n")
 print(filedic["Tun"])
-with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_use_02_new2.txt", "w") as gff:#analyze the file to_use_02.txt
+with open("~/to_use_02_new2.txt", "w") as gff:#analyze the file to_use_02.txt
     gff.write(f"{first2}\tLat\tLong".replace("\n",""))
     for key in filedic2:
         gff.write(f"\n{key}")
@@ -69,7 +69,7 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/to_u
 
 #03 - VCF parsing
 missing,total=0,0
-with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/ex07_genotypes.vcf", "r") as gff:
+with open("~/ex07_genotypes.vcf", "r") as gff:
     for lines in gff:
         if lines.startswith("locus"):
             missing=lines.count(".")
@@ -84,7 +84,7 @@ with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/ex07
 seperate=["teste"]
 i=0
 print("\n\n\n\n\n")
-with open("/home/guimbreon/Desktop/Git_organazier/pab_22-23/Exercices/ex_07/ex07_genotypes.vcf", "r") as gff:
+with open("~/ex07_genotypes.vcf", "r") as gff:
     for lines in gff:
         i=0
         if lines.startswith("#CHROM"):
