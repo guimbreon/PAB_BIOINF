@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
+##!/usr/bin/env python3
 import sys
 bases,total,all,names,count=["A","T","G","C"],"",[],[],0
-with open((input("Which file are you going to analyze?\n>>")).replace("'",""), "r") as gff: #with the replace method it can now read any file u drag to the terminal
-    search=sys.argv[1].replace("'","").upper()
-    search="ATAGT"
+with open(sys.argv[1], "r") as gff: #with the replace method it can now read any file u drag to the terminal
+    search=input("Which Motif do you want to search?")
     if set(search).difference(bases) == set() and len(search)>=5: 
         for lines in gff:
             if lines.startswith(">"):
